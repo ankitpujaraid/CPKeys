@@ -1,0 +1,128 @@
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+    Dim ws As Worksheet
+    Set ws = Me
+    
+    ' Clear any existing conditional formatting
+    ws.Cells.FormatConditions.Delete
+
+    ' Highlight the row and column of the selected cell
+    With ws.Cells.FormatConditions.Add(Type:=xlExpression, Formula1:="=OR(CELL(""row"")=ROW(),CELL(""col"")=COLUMN())")
+        .Interior.Color = RGB(255, 255, 150) ' Highlight color (light yellow)
+    End With
+End Sub
+
+
+
+..............................................................................................................................................
+
+
+
+1. Create a Custom Function:
+	Press ALT + F11 to open the VBA editor.
+	Click Insert > Module to create a new module.
+	Paste the following code into the module window:
+/////////////////////////////////////////////////////////////////
+Sub upper()
+For Each cell In Selection
+If Not cell.HasFormula Then
+cell.Value = UCase(cell.Value)
+End If
+Next cell
+End Sub
+
+Sub proper()
+For Each cell In Selection
+If Not cell.HasFormula Then
+cell.Value = Application.WorksheetFunction.proper(cell.Value)
+End If
+Next cell
+End Sub
+
+Sub lower()
+For Each cell In Selection
+If Not cell.HasFormula Then
+cell.Value = LCase(cell.Value)
+End If
+Next cell
+End Sub
+////////////////////////////////////////////////////////////////
+	Close the VBA editor.
+
+
+
+..............................................................................................................................................
+
+
+
+1. Create a Custom Function:
+	Press ALT + F11 to open the VBA editor.
+	Click Insert > Module to create a new module.
+	Paste the following code into the module window:
+/////////////////////////////////////////////////////////////////
+Function FAC(value As Variant) As String
+    FAC = Format(value, "$#,##0.00")
+End Function
+////////////////////////////////////////////////////////////////
+	Close the VBA editor.
+
+2. Use the Custom Function:
+	In a cell where you want the formatted currency value to appear, enter the formula, replacing 'A1' with the cell reference containing the original numerical value:
+Formula: =FAC(A1)
+	Than hit enter.
+
+
+..............................................................................................................................................
+
+
+
+Sub TrimSpacesBetweenWords()
+    Dim selectedRange As Range
+    Dim cell As Range
+    Dim words() As String
+    Dim trimmedValue As String
+    Dim i As Integer
+    
+    On Error Resume Next
+    Set selectedRange = Selection.SpecialCells(xlCellTypeVisible)
+    On Error GoTo 0
+    
+    If Not selectedRange Is Nothing Then
+        For Each cell In selectedRange
+            If Not IsEmpty(cell.value) And TypeName(cell.value) = "String" Then
+                words = Split(cell.value, " ")
+                trimmedValue = ""
+                For i = LBound(words) To UBound(words)
+                    If words(i) <> "" Then
+                        trimmedValue = trimmedValue & " " & words(i)
+                    End If
+                Next i
+                cell.value = Trim(Application.WorksheetFunction.Trim(trimmedValue))
+            End If
+        Next cell
+    End If
+End Sub
+
+
+
+..............................................................................................................................................
+
+
+
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+    Dim ws As Worksheet
+    Set ws = Me
+    
+    ' Clear any existing conditional formatting
+    ws.Cells.FormatConditions.Delete
+
+    ' Highlight the row and column of the selected cell
+    With ws.Cells.FormatConditions.Add(Type:=xlExpression, Formula1:="=OR(CELL(""row"")=ROW(),CELL(""col"")=COLUMN())")
+        .Interior.Color = RGB(255, 255, 150) ' Highlight color (light yellow)
+    End With
+End Sub
+
+
+
+..............................................................................................................................................
+
+
