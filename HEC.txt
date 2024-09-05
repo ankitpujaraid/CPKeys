@@ -16,12 +16,7 @@ Private Sub Workbook_SheetSelectionChange(ByVal Sh As Object, ByVal Target As Ra
     End With
 End Sub
 
-
-
-
 ..............................................................................................................................................
-
-
 
 1. Create a Custom Function:
 	Press ALT + F11 to open the VBA editor.
@@ -54,11 +49,7 @@ End Sub
 ////////////////////////////////////////////////////////////////
 	Close the VBA editor.
 
-
-
 ..............................................................................................................................................
-
-
 
 1. Create a Custom Function:
 	Press ALT + F11 to open the VBA editor.
@@ -76,10 +67,7 @@ End Function
 Formula: =FAC(A1)
 	Than hit enter.
 
-
 ..............................................................................................................................................
-
-
 
 Sub TrimSpacesBetweenWords()
     Dim selectedRange As Range
@@ -108,27 +96,73 @@ Sub TrimSpacesBetweenWords()
     End If
 End Sub
 
+..............................................................................................................................................
 
+Sub RemoveAfterFourCharacters()
+    Dim cell As Range
+    Dim text As String
+    
+    ' Loop through each selected cell
+    For Each cell In Selection
+        ' Get the current cell's text
+        text = cell.Value
+        
+        ' If the text length is greater than 4 characters, truncate it
+        If Len(text) > 4 Then
+            cell.Value = Left(text, 4)
+        End If
+    Next cell
+End Sub
 
 ..............................................................................................................................................
 
 
-
-Private Sub Worksheet_SelectionChange(ByVal Target As Range)
-    Dim ws As Worksheet
-    Set ws = Me
+Sub AddSpaceAfterEvery4Chars()
+    Dim cell As Range
+    Dim i As Integer
+    Dim newText As String
+    Dim currentText As String
     
-    ' Clear any existing conditional formatting
-    ws.Cells.FormatConditions.Delete
-
-    ' Highlight the row and column of the selected cell
-    With ws.Cells.FormatConditions.Add(Type:=xlExpression, Formula1:="=OR(CELL(""row"")=ROW(),CELL(""col"")=COLUMN())")
-        .Interior.Color = RGB(255, 255, 150) ' Highlight color (light yellow)
-    End With
+    ' Loop through each cell in the selected range
+    For Each cell In Selection
+        currentText = cell.Value
+        newText = ""
+        
+        ' Loop through the text, adding a space after every 4 characters
+        For i = 1 To Len(currentText) Step 4
+            ' Add the next 4 characters to the newText string
+            newText = newText & Mid(currentText, i, 4) & " "
+        Next i
+        
+        ' Trim any trailing space
+        cell.Value = Trim(newText)
+    Next cell
 End Sub
 
 
 
-..............................................................................................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
