@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate Code Line Highlighter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .custom-textarea {
+            width: 100%;
+        }
+        .container-custom {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .row-custom {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .p-3-custom {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-custom mt-5">
+        <h1 class="text-center mb-4">Duplicate Code Line Highlighter</h1>
+        <div class="row row-custom mb-3">
+            <div class="col-md-6">
+                <textarea id="text1" class="form-control custom-textarea" rows="15" placeholder="Enter first code here..."></textarea>
+            </div>
+            <div class="col-md-6">
+                <textarea id="text2" class="form-control custom-textarea" rows="15" placeholder="Enter second code here..."></textarea>
+            </div>
+        </div>
+        <div class="text-center mb-4">
+            <button class="btn btn-primary" onclick="highlightDuplicates()">Highlight Duplicates</button>
+        </div>
+        <div class="row row-custom">
+            <div class="col-md-6">
+                <div id="result1" class="p-3-custom border" style="white-space: pre-wrap; font-family: monospace;"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="result2" class="p-3-custom border" style="white-space: pre-wrap; font-family: monospace;"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function highlightDuplicates() {
+            const text1 = document.getElementById('text1').value;
+            const text2 = document.getElementById('text2').value;
+
+            const lines1 = text1.split('\n').map(line => line.trim());
+            const lines2 = text2.split('\n').map(line => line.trim());
+
+            const duplicates = lines1.filter(line => lines2.includes(line) && line !== '');
+
+            const highlightedText1 = text1.split('\n').map(line => 
+                duplicates.includes(line.trim()) ? `<span class="highlight">${line}</span>` : line
+            ).join('\n');
+
+            const highlightedText2 = text2.split('\n').map(line => 
+                duplicates.includes(line.trim()) ? `<span class="highlight">${line}</span>` : line
+            ).join('\n');
+
+            document.getElementById('result1').innerHTML = highlightedText1;
+            document.getElementById('result2').innerHTML = highlightedText2;
+        }
+    </script>
+</body>
+</html>
