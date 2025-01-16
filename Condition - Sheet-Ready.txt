@@ -1,0 +1,46 @@
+Filter & Delete (Column K:K-Policy No):::
+
+GC20 - Ctrl + Shift - Select & Delete
+Q - Ctrl + Shift - Select & Delete
+PK - Ctrl + Shift - Select & Delete
+TP - Ctrl + Shift - Select & Delete
+GCV - Ctrl + Shift - Select & Delete
+MISC - Ctrl + Shift - Select & Delete
+
+Replace (Column K:K-Policy No):::
+
+13152252	 :: 	:13152252
+20112002	 :: 	:20112002
+20122002	 :: 	:20122002
+20152002	 :: 	:20152002
+20252002	 :: 	:20252002
+22300031	 :: 	:22300031
+35150031	 :: 	:35150031
+35420331	 :: 	:35420331
+36140031	 :: 	:36140031
+40200034	 :: 	:40200034
+42030312	 :: 	:42030312
+42030331	 :: 	:42030331
+42060031	 :: 	:42060031
+42070131	 :: 	:42070131
+42210031	 :: 	:42210031
+A_A	 	 :: 	A/A
+A 00 00	 	 :: 	
+A 0000	 	 :: 	
+,	 	 :: 	
+;	 	 :: 	
+: A	 	 :: 	
+.	 	 :: 	
+A'	 	 :: 	
+A (1)	 	 :: 	
+A (2)	 	 :: 	
+A (3)	 	 :: 	
+A A	 	 :: 	
+A A	 	 :: 	
+
+
+Replace (Column L:L-Reg No):::
+
+-		 ::	
+A A	 	 :: 	
+A A	 	 :: 	
