@@ -1,0 +1,160 @@
+FILTER ITEMS -
+Blanks
+GC20
+Q
+(1)
+(2)
+(3)
+PK
+TP
+GCV
+MISC
+PAY
+PEN
+
+
+REPLACING ITEMS -  
+*35150031
+*42060031
+*42030331
+*3614003124
+*35420331
+*201320070
+*201520020
+*1315224
+*22300031
+*420701312
+*131522523
+*20252002012
+*202520020
+*3614003124
+*131522523
+*40200030
+*201520050
+*201120020
+*201220020
+_
+ 00 00
+.
+,
+
+AFTER FILTER - REPLACE -
+ 000 -  
+ 000 -  
+
+REPLACE IN REG NO -
+- - 
+  - 
+
+
+
+BEAT CAR WITH 1199CC - PETROL
+
+Add ":" before policy number
+ SBI(Which contain 8 zeros)
+ National
+ United India - Policy Bazaar
+ New India
+ Reliance
+ Liberty
+ Kotak
+ Edelwise(Zuno)
+
+Zuno - Edelweiss Tokio Life Insurance
+
+PA For Owner Driver - Only This Value Adds in PA Field
+PA For Other Persons etc... - Adds in LL Field Only.
+
+goddelpos6 - PRANAV GOYAL
+goddelpos18 - BGM
+
+
+AGENT::::
+
+SACHET SAJJAN INS BHIWANI - SACHET JHAJJAR
+
+VIKAS TAYAL - VIKAS TOSHAM
+
+AUTO INSPECTION or AUTO EXPERTS PANIPAT - PANKAJ PANIPAT
+
+VIKAS SATROD - RITIK KAUSHIK(MOHIT SATROD)
+
+BALA JI INSURANCE - DAYANAND BAWAL
+
+ACG FINANCIAL = MUKESH ROHTAK
+
+AG GOYAL UKLANA = JAI GOYAL
+
+VIJENDER DADRI = VIJENDER PHOGAT
+
+SBJ INSURANCE = SACHIN GARG
+
+NAVEEN SONIPAT = NAVEEN EVERGREEN
+
+NAS INSURANCE = ANTPAL YADAV
+
+KRISHNA ZOPPER = BIMA BOSE
+
+RAJAT LIC - KAMALJEET HISAR
+
+SUMIT TOMAR - SUMIT JHAJJAR
+
+TOTAL INSURANCE - NAVEEN KAUSHIK
+
+BGM - LOKESH BANSAL
+
+Vikram Rathore or Vikram Kanina - Vikram Jakhar
+
+Ramesh Julana - Ramesh Jindal
+
+AV Brothers or Brother Associate - Vikas Brothers
+
+Nas Insurance - Antpal Yadav
+
+Parveen Rohtak - Parveen Atri Rohtak
+
+Ajay Arora - Ravinder Kethal
+
+Shivansh Insurance - Shivay Insurance Pataudi
+
+Gourav Gajvani - Gourav Office
+
+Sanjay Sangwan Jui - Sanjay Jui
+
+Sachin Lalit Jangra or Similar - Lalit Sachin Sangwan
+
+ACG Financial - Mukesh Rohtak
+
+PAWAN BADRA - PAWAN DELHI
+
+GAGAN GARG - GAGAN UNITED
+
+
+
+
+
+BROKER::::
+
+Certigo Insurance Brokers - PRANAV GOYAL HDFC
+
+DEVENDER KUMAR - RAMAN ORIENTAL(IN ORIENTAL POLICIES)
+
+Krishan Singh Jhala or Jai Singh Rathore - Bala Ji Insurance
+
+Good Insurance or Arun Goyal - Pranav Goyal
+
+Oriental::  Bhupender Oriental - Sunil Kumar Oriental, Ellenabad Sirsa Branch Oriental - Vipin Oriental
+
+Iffco::  Hitesh Chawla - Sanjeev Iffco
+
+Zopper - Bima Bose
+
+Chola Policy::  Nasreen - Chandan Chola
+
+Dump Polcies::
+Package Policy - Rollover
+Third Party - RC Based
+Own Damage - Rollover
+Bundled - Rollover
+
+
